@@ -1,0 +1,10 @@
+node_modules/
+/CapacityIntelligenceAutomationTests/obj/Debug
+/CapacityIntelligenceAutomationTests/bin/Debug
+/.vs/
+.vs/365AutomatedTests/v15/.suo
+.vs/365AutomatedTests/v15/Server/sqlite3/storage.ide
+/365AutomatedTests/bin/Debug
+/365AutomatedTests/obj/Debug
+*feature.cs
+*.cache

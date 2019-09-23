@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94DC6316-55C0-4B22-A96D-3E1ABAE1C22C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_365AutomatedTests</RootNamespace>
+    <AssemblyName>365AutomatedTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BoDi, Version=1.4.1.0, Culture=neutral, PublicKeyToken=ff7cd5ea2744b496, processorArchitecture=MSIL">
+      <HintPath>..\packages\BoDi.1.4.1\lib\net45\BoDi.dll</HintPath>
+    </Reference>
+    <Reference Include="Coypu, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coypu.3.0.1\lib\net45\Coypu.dll</HintPath>
+    </Reference>
+    <Reference Include="Gherkin, Version=6.0.0.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gherkin.6.0.0\lib\net45\Gherkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.4.0\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.4.1\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="Utf8Json, Version=1.3.7.0, Culture=neutral, PublicKeyToken=8a73d3ba7e392e27, processorArchitecture=MSIL">
+      <HintPath>..\packages\Utf8Json.1.3.7\lib\net45\Utf8Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="Winium.Cruciatus, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winium.Cruciatus.2.10.0\lib\net45\Winium.Cruciatus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+<<<<<<< HEAD
+    <Compile Include="Features\BatchDropper\BD444ManualDrippingForTestsWithDifferentProgramm.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD444ManualDrippingForTestsWithDifferentProgramm.feature</DependentUpon>
+=======
+    <Compile Include="Features\BatchDropper\BD631SortingWithFullTablet.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD631SortingWithFullTablet.feature</DependentUpon>
+>>>>>>> 3d43b39fb4d25b7ffce055e80fd6bcbaab7215b9
+    </Compile>
+    <Compile Include="Framework\CommonExtention.cs" />
+    <Compile Include="Framework\ITableModel.cs" />
+    <Compile Include="Models\BDTest.cs" />
+    <Compile Include="Steps\BD319SortingWithIsolationedDNASampleSteps.cs" />
+    <Compile Include="Steps\BD301DictionariesTerminalSteps.cs" />
+    <Compile Include="Steps\BD444ManualDrippingForTestsWithDifferentProgrammSteps.cs" />
+    <Compile Include="Steps\BD828DictionariesReagentsSteps.cs" />
+    <Compile Include="Steps\BDFullCycleOneScenarioWithStandartAndWaxSteps.cs" />
+    <Compile Include="Steps\BDFullCycleWithStandartSteps.cs" />
+    <Compile Include="Steps\BDStagingReactionsInTubesWorkPlaceSteps.cs" />
+    <Compile Include="Steps\BDReverseTranscriptionWorkPlaceSteps.cs" />
+    <Compile Include="Steps\BDTestGetPKOOKOSteps.cs" />
+    <Compile Include="Steps\BDCreateTestinDictionariesSteps.cs" />
+    <Compile Include="Steps\BD_Isolation_DNA_WorkPlaceSteps.cs" />
+    <Compile Include="Steps\CCENCheckingTheAvailabilityOfEquipmentInDCSteps.cs" />
+    <Compile Include="Steps\CCENEquipmentsAssertsSteps.cs" />
+    <Compile Include="Steps\CCENEquipmentsMainSteps.cs" />
+    <Compile Include="Steps\CCENConsiderGenderAndAgeOfPatientsSteps.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDCheckLightStand.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\CCENDiscountRulesSteps.cs" />
+    <Compile Include="Steps\CCENAutoLoadServicesSteps.cs" />
+    <Compile Include="Steps\CCENCanceledNomenclatureAssertSteps.cs" />
+    <Compile Include="Framework\CustomChromeProfileSeleniumWebDriver.cs" />
+    <Compile Include="Framework\DBHelper.cs" />
+    <Compile Include="Framework\ElementScopeExtension.cs" />
+    <Compile Include="Steps\CCENCreatePreorderAndDeleteAllNomenlaturesSteps.cs" />
+    <Compile Include="Steps\CCENDelayedNomenclatureAssertSteps.cs" />
+    <Compile Include="Steps\CCENDisplayEmployeeContractWhenSelectMobileAndEmployeeSteps.cs" />
+    <Compile Include="Steps\CCENInsurancePersonalDataSteps.cs" />
+    <Compile Include="Steps\CCENFilterRulesInteractionSteps.cs" />
+    <Compile Include="Steps\CCENPersonalDataChecklistSteps.cs" />
+    <Compile Include="Steps\CreatePreorderWithCanceledNomenclatureSteps.cs" />
+    <Compile Include="Steps\LengthOfExecutionSteps.cs" />
+    <Compile Include="Steps\LoginWithAssertsSteps.cs" />
+    <Compile Include="Models\InsurancedPatient.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\PreorderData.cs" />
+    <Compile Include="Steps\BatchDropperOpenSteps.cs" />
+    <Compile Include="Steps\BD0025_IsolationDNKSteps.cs" />
+    <Compile Include="Steps\BDCheckLightStandSteps.cs" />
+    <Compile Include="Steps\BDOptimalConfigurationOfManualDrippingSteps.cs" />
+    <Compile Include="Steps\BDProhibitionOfDrippingTheCanceledBatchSteps.cs" />
+    <Compile Include="Steps\BDReagentsSmokeWithSchedSteps.cs" />
+    <Compile Include="Steps\BDSamplesFromDifferentTerminalHubAreProhibitedSteps.cs" />
+    <Compile Include="Steps\BDSortingWithDNKIsolatedSampleSteps.cs" />
+    <Compile Include="Steps\BDSortingWithExperimentModeStatusSettingsSteps.cs" />
+    <Compile Include="Steps\BDTwoTestsInOneGroupWithoutSchedSteps.cs" />
+    <Compile Include="Steps\CreateBasicPreorderSteps.cs" />
+    <Compile Include="Steps\DTSJobsRunSteps.cs" />
+    <Compile Include="Steps\ManyCellsDebugSteps.cs" />
+    <Compile Include="Steps\BD002_SortingSteps.cs" />
+    <Compile Include="Framework\Config.cs" />
+    <Compile Include="Framework\Crawler.cs" />
+    <Compile Include="Framework\Generic\Page.cs" />
+    <Compile Include="Framework\Generic\Section.cs" />
+    <Compile Include="Framework\MSDatabaseConnector.cs" />
+    <Compile Include="Framework\Tools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\BD001_CreateTestSteps.cs" />
+    <Compile Include="Steps\BD003_ProductionAcceptanceSteps.cs" />
+    <Compile Include="Steps\BD004_ReagentsSteps.cs" />
+    <Compile Include="Steps\BD005_ManualDripping.cs" />
+    <Compile Include="Steps\BD006_PositiveControls.cs" />
+    <Compile Include="Steps\CommonSteps.cs" />
+    <Compile Include="Steps\PROMOCreatePromotionSteps.cs" />
+    <Compile Include="Steps\VariousDataSteps.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDBatchesPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDControlMaterialsDictPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDDictionariesReagentsPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDDictTestPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDFormingPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDIsolationDNKPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDMainPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDManualDrippingPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDNewMultiplexPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDNewTestPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDPlanshetPositionPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDPositiveControlsWorkplacePage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDProductionAcceptancePage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDReagentsWorkplacePage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDSchedulesPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDSettingsDevicePage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDSettingsLaboratoriesPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDSettingsPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDTerminalsPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDTubesManualDrippingPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDContentOfBatchPage.cs" />
+    <Compile Include="UIObjects\Pages\CBConsumablePage.cs" />
+    <Compile Include="UIObjects\Pages\CBCourierPage.cs" />
+    <Compile Include="UIObjects\Pages\CBMailQuestionPage.cs" />
+    <Compile Include="UIObjects\Pages\CCEN\CCENCartPage.cs" />
+    <Compile Include="UIObjects\Pages\CCEN\CCENDelayConfirmWindow.cs" />
+    <Compile Include="UIObjects\Pages\CCEN\CCENFilterPanelPage.cs" />
+    <Compile Include="UIObjects\Pages\CCEN\CCENMainPage.cs" />
+    <Compile Include="UIObjects\Pages\CCEN\CCENNomenclaturesPage.cs" />
+    <Compile Include="UIObjects\Pages\CCEN\CCENPersonalDataPage.cs" />
+    <Compile Include="UIObjects\Pages\PreOrdersJournalPage.cs" />
+    <Compile Include="UIObjects\Pages\LoginPage.cs" />
+    <Compile Include="UIObjects\Pages\MainPage.cs" />
+    <Compile Include="UIObjects\Pages\BD\BDSortingPage.cs" />
+    <Compile Include="UIObjects\Pages\Results\ConclusionsPage.cs" />
+    <Compile Include="UIObjects\Pages\Results\OrderEditPage.cs" />
+    <Compile Include="UIObjects\Pages\Results\OrderMainPage.cs" />
+    <Compile Include="UIObjects\Pages\Results\SearchByExternalSampleNumberPage.cs" />
+    <Compile Include="UIObjects\Pages\Results\SearchByOrderNumberPage.cs" />
+    <Compile Include="UIObjects\Pages\Results\SearchByOtherDataPage.cs" />
+    <Compile Include="UIObjects\Pages\Results\SearchBySampleNumberPage.cs" />
+    <Compile Include="UIObjects\Pages\Results\SearchByTablePage.cs" />
+    <Compile Include="UIObjects\Pages\NewLogin365Page.cs" />
+    <Compile Include="UIObjects\Pages\TestLoginChangePasswordPage.cs" />
+    <Compile Include="UIObjects\Pages\TestLoginWrongPasswordPage.cs" />
+    <Compile Include="UIObjects\Pages\UserSettingsPage.cs" />
+    <Compile Include="UIObjects\Sections\LeftMenu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\BatchDropper\BD319SortingWithIsolationedDNASample.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BD319SortingWithIsolationedDNASample.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BD301DictionariesTerminal.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BD301DictionariesTerminal.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BD433SimpleFormingWithSamplesForOneTest.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BD433SimpleFormingWithSamplesForOneTest.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BD435ManualDrippingTwoTestsFullTablet.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BD435ManualDrippingTwoTestsFullTablet.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BD440ManualDrippingOneTestFullTablet.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BD440ManualDrippingOneTestFullTablet.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BD631SortingWithFullTablet.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BD631SortingWithFullTablet.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDCheckLightStand.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDCheckLightStand.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDCreateTestinDictionaries.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDCreateTestinDictionaries.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDFullCycleOneScenarioWithStandartAndWax.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDFullCycleOneScenarioWithStandartAndWax.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDFullCycleWithStandart.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDFullCycleWithStandart.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDManualDrippingOfFullSortingPlanchet.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDManualDrippingOfFullSortingPlanchet.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDOptimalConfigurationOfManualDripping.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDOptimalConfigurationOfManualDripping.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDProhibitionOfDrippingTheCanceledBatch.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDProhibitionOfDrippingTheCanceledBatch.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDReagentsSmokeWithSched.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDReagentsSmokeWithSched.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDSamplesFromDifferentTerminalHubAreProhibited.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDSamplesFromDifferentTerminalHubAreProhibited.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDSortingWithDNKIsolatedSample.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDSortingWithDNKIsolatedSample.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDSortingWithExperimentModeStatusSettings.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDSortingWithExperimentModeStatusSettings.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDStagingReactionsInTubesWorkPlace.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDStagingReactionsInTubesWorkPlace.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDTestGetPKOOKO.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDTestGetPKOOKO.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDTwoTestsInDifferentGroups.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDTwoTestsInDifferentGroups.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDTwoTestsInDiffGroupsWithoutSched.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDTwoTestsInDiffGroupsWithoutSched.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDTwoTestsInOneGroupFullReagentPlanchet.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDTwoTestsInOneGroupFullReagentPlanchet.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDTwoTestsInOneGroupWithoutSched.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDTwoTestsInOneGroupWithoutSched.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BD_Isolation_DNA_WorkPlace.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BD_Isolation_DNA_WorkPlace.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BDReverseTranscriptionWorkPlace.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDReverseTranscriptionWorkPlace.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BD828DictionariesReagents.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BD828DictionariesReagents.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\BD444ManualDrippingForTestsWithDifferentProgramm.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BD444ManualDrippingForTestsWithDifferentProgramm.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENCheckingTheAvailabilityOfEquipmentInDC.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENCheckingTheAvailabilityOfEquipmentInDC.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENCreatePreorderAndDeleteAllNomenlatures.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENCreatePreorderAndDeleteAllNomenlatures.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENDisplayEmployeeContractWhenSelectMobileAndEmployee.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENDisplayEmployeeContractWhenSelectMobileAndEmployee.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENEquipmentsAsserts.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENEquipmentsAsserts.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENEquipmentsBasicAsserts.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENEquipmentsBasicAsserts.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENEquipmentsMain.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENEquipmentsMain.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENInsurancePersonalData.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENInsurancePersonalData.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENFilterRulesInteraction.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENFilterRulesInteraction.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENPersonalDataChecklist.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENPersonalDataChecklist.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CreateBasicPreorder.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateBasicPreorder.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CreateCITOPreorder.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateCITOPreorder.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CreateMobilePreorder.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateMobilePreorder.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CreatePreorderWithCanceledNomenclature.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreatePreorderWithCanceledNomenclature.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\DTSJobsRun.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DTSJobsRun.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\LengthOfExecution.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LengthOfExecution.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\LoginWithAsserts.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoginWithAsserts.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\PROMOCreatePromotion.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PROMOCreatePromotion.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENCanceledNomenclatureAssert.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENCanceledNomenclatureAssert.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENDelayedNomenclatureAssert.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENDelayedNomenclatureAssert.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallCenter\CCENConsiderGenderAndAgeOfPatients.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CCENConsiderGenderAndAgeOfPatients.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BatchDropper\ManualDrippingFullfillingAlgorythm1.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ManualDrippingFullfillingAlgorythm1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DownloadedFiles\StubFileForDownloadedFilesDirectory.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Screenshots\StubFileForScreenshotDirectory.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UploadFiles\StubFileFoUploadFilesDirectory.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\CallBack\" />
+    <Folder Include="Features\Inner365\PreOrdersJournal\" />
+    <Folder Include="Steps\PreOrdersJournal\" />
+    <Folder Include="UIObjects\Pages\Inner365\PreOrdersJournal\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.1\build\SpecFlow.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.76.0.3809.68\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.76.0.3809.68\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\SpecFlow.2.4.1\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.76.0.3809.68\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.76.0.3809.68\build\Selenium.WebDriver.ChromeDriver.targets')" />
+</Project>
